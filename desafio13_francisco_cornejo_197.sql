@@ -39,14 +39,14 @@ GROUP BY fecha;
 
 
 -- 5. ¿Qué día se inscribieron la mayor cantidad de personas y cuántas personas se inscribieron en ese día?SELECT fecha, SUM(cantidad) AS inscritos_en_max_dia
-SELECT fecha, MAX(cantidad) AS max_inscritos
+SELECT fecha, SUM(cantidad) AS max_inscritos
 FROM INSCRITOS
 GROUP BY fecha
 ORDER BY max_inscritos DESC
 LIMIT 1;
 -- Respuesta:
 /*
-"2021-08-01"	99
+"2021-08-01"	182
 */
 
 
